@@ -1,9 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Set Mass
 
-
-
-mass = 500
+mass = 800
 
 
 
