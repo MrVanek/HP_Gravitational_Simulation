@@ -9,7 +9,7 @@ Fy = 0
 
 
 
-for(i = 0; i < 2; i++){
+for(i = 0; i < instance_number(oStatic); i++){
 	
 	//calculate direction + magnitude
 	var planet = instance_find(oStatic,i);
@@ -22,7 +22,7 @@ for(i = 0; i < 2; i++){
 
 }
 
-for(i = 0; i < 1; i++){
+for(i = 0; i < instance_number(oActive); i++){
 	
 	//calculate direction + magnitude
 	var planet = instance_find(oActive, i);
