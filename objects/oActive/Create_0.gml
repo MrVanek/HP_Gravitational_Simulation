@@ -1,8 +1,8 @@
 /// @description Setup Variables
 
 
-mass = 1
-vel = 1
+mass = 5
+vel = 5
 speed = vel
 
 direction = 0
