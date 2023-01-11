@@ -3,19 +3,38 @@
 
 //loop through all objects
 
-gravitationalForce = 15
+gravitationalForce = 30
 Fx = 0
 Fy = 0
 
 
 
+for(i = 0; i < 2; i++){
+	
+	//calculate direction + magnitude
+	var planet = instance_find(oStatic,i);
+	r_sqr = sqr(point_distance(x, y, planet.x, planet.y));
+	F = (gravitationalForce * mass * planet.mass) / r_sqr;
+	show_debug_message(F);
+	//show_debug_message(lengthdir_x(point_distance(x,y, planet.x,planet.y), point_direction(x,y, planet.x, planet.y)) )
+	Fx += lengthdir_x(F, point_direction(x,y, planet.x, planet.y))
+	Fy += lengthdir_y(F, point_direction(x,y, planet.x, planet.y))
+
+}
+
 for(i = 0; i < 1; i++){
 	
 	//calculate direction + magnitude
-	planet = instance_find(oStatic,i);
-	//show_debug_message(lengthdir_x(point_distance(x,y, planet.x,planet.y), point_direction(x,y, planet.x, planet.y)) )
-	Fx += (gravitationalForce * mass * planet.mass ) / lengthdir_x(sqr(point_distance(x,y, planet.x,planet.y)), point_direction(x,y, planet.x, planet.y))
-	Fy += (gravitationalForce * mass * planet.mass ) / lengthdir_y(sqr( point_distance(x,y, planet.x,planet.y)), point_direction(x,y, planet.x, planet.y))
+	var planet = instance_find(oActive, i);
+	if(planet.id != id) {
+		r_sqr = sqr(point_distance(x, y, planet.x, planet.y));
+		F = (gravitationalForce * mass * planet.mass) / r_sqr;
+		show_debug_message(F);
+		//show_debug_message(lengthdir_x(point_distance(x,y, planet.x,planet.y), point_direction(x,y, planet.x, planet.y)) )
+		Fx += lengthdir_x(F, point_direction(x,y, planet.x, planet.y))
+		Fy += lengthdir_y(F, point_direction(x,y, planet.x, planet.y))
+	}
+	
 
 }
 
