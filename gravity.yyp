@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "gravity",
   "resources": [
+    {"id":{"name":"oController","path":"objects/oController/oController.yy",},"order":3,},
     {"id":{"name":"oStatic","path":"objects/oStatic/oStatic.yy",},"order":0,},
     {"id":{"name":"Active","path":"sprites/Active/Active.yy",},"order":1,},
     {"id":{"name":"oMass","path":"objects/oMass/oMass.yy",},"order":2,},

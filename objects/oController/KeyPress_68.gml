@@ -1,6 +1,5 @@
-/// @description Set Mass
-
-mass = 35000
+/// @description toggle drawing
+drawing = !drawing;
 
 
 
