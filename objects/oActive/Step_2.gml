@@ -21,6 +21,7 @@ for(var i = 0; i < instance_number(oMass); i++){
 		
 		if (point_distance(x, y, planet.x, planet.y) < speed){
 			planet.mass += mass;
+			oController.timerRunning = false;
 			instance_destroy(self);
 			
 		} else {
